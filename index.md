@@ -2,13 +2,6 @@
 title: Documentação ShareFin
 ---
 
-| A | B |
-|---|---|
-| 1 | 2 |
-| 3 | 4 |
-| 5 | 6 |
-
-
 # **GET** `/account`
 #### Query Params
 
@@ -63,7 +56,9 @@ None
 Authorization : Bearer {{ Token_jwt }}
 
 ### Request Body
+
 | Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
 | user    | int | sim | Id do usuário |
 | nome   | string   | sim | Nome da conta bancária | 
 | moeda | string   | sim | Moeda utilizada na conta |
@@ -124,7 +119,9 @@ None
 Authorization : Bearer {{ Token_jwt }}
 
 ### Request Body
+
 | Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
 | nome   | string   | não | Nome da conta bancária | 
 | moeda | string   | não | Moeda utilizada na conta |
 | cor | string   | não | Cor da conta bancária |
@@ -205,7 +202,9 @@ None
 
 # **GET** `/category`
 #### Query Params
+
 | Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
 | nome   | string   | não | Nome da categoria |
 | tipo   | string   | não | Tipo da transação |
 
@@ -251,7 +250,9 @@ None
 Authorization : Bearer {{ Token_jwt }}
 
 ### Request Body
+
 | Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
 | nome   | string   | sim | Nome da categoria | 
 | tipo | string   | sim | Tipo da categoria |
 | valor_inicial | Float   | não | Valor inicial da categoria |
@@ -309,7 +310,9 @@ None
 Authorization : Bearer {{ Token_jwt }}
 
 ### Request Body
+
 | Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
 | nome   | string   | sim | Nome da categoria | 
 | tipo | string   | sim | Tipo da categoria |
 | valor_inicial | Float   | não | Valor inicial da categoria |
@@ -390,7 +393,9 @@ None
 
 # **GET** `/dashboard`
 #### Query Params
+
 | Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
 | data_transacao_low   | datetime (YYYY-MM-DD)   | não | Data inicial do filtro de transação |
 | data_transacao_high   | datetime (YYYY-MM-DD)   | não | Data final do filtro de transação |
 | conta   | string   | não | Conta da transação |
@@ -590,7 +595,9 @@ None
 Authorization : Bearer {{ Token_jwt }}
 
 ### Request Body
+
 | Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
 | titulo    | string | sim | Titulo do feedback |
 | descricao   | string   | sim | Descrição do feedback | 
 
@@ -629,7 +636,9 @@ Authorization : Bearer {{ Token_jwt }}
 
 # **GET** `/transactions`
 #### Query Params
+
 | Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
 | conta    | string | não | Nome da conta |
 | categoria   | string   | não | Nome da categoria |
 | usuario | string   | não | Nome do usuário |
@@ -757,7 +766,9 @@ None
 Authorization : Bearer {{ Token_jwt }}
 
 ### Request Body
+
 | Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
 | conta    | Int | não | ID da conta |
 | categoria   | Int   | não | ID da categoria |
 | usuario | Int   | não | ID do usuário |
@@ -817,7 +828,9 @@ None
 Authorization : Bearer {{ Token_jwt }}
 
 ### Request Body
+
 | Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
 | file    | File | sim | Arquivo CSV |
 
 ### Example
@@ -859,7 +872,9 @@ None
 Authorization : Bearer {{ Token_jwt }}
 
 ### Request Body
+
 | Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
 | conta    | Int | não | ID da conta |
 | categoria   | Int   | não | ID da categoria |
 | usuario | Int   | não | ID do usuário |
@@ -937,7 +952,9 @@ None
 
 # **GET** `/usuario/confirmar-email`
 #### Query Params
+
 | Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
 | token   | string   | sim | Token de confirmação de Email | 
 
 ### Headers
@@ -971,7 +988,9 @@ None
 Authorization : Bearer {{ Token_jwt }}
 
 ### Request Body
+
 | Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
 | nome   | string   | sim | Nome do usuário | 
 | email   | string   | sim | Email do usuário | 
 | senha   | string   | sim | Senha do usuário | 
@@ -1024,7 +1043,9 @@ None
 Authorization : Bearer {{ Token_jwt }}
 
 ### Request Body
+
 | Parâmetro | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
 | email   | string   | sim | Email do usuário | 
 | senha   | string   | sim | Senha do usuário | 
 
