@@ -1,3 +1,9 @@
+---
+layout: default
+title: Docs — ShareFin
+---
+
+
 # **GET** `/account`
 #### Query Params
 | Parâmetro | Tipo | Obrigatório | Descrição |
