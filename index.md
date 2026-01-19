@@ -9,7 +9,7 @@ title: Documentação ShareFin
 # **GET** `/account`
 #### Query Params
 | Parâmetro | Tipo | Obrigatório | Descrição |
-|----------|------|------------|-----------|
+| :--- | :---: | :---: | ---: |
 | nome    | string | não | Nome da conta |
 | moeda   | string   | não | Moeda utilizada na conta |
 | ativa | bool   | não | Status de atividade |
