@@ -2,6 +2,9 @@
 title: Documentação ShareFin
 ---
 
+| A | B |
+|---|---|
+| 1 | 2 |
 
 # **GET** `/account`
 #### Query Params
