@@ -19,9 +19,10 @@ Authorization : Bearer {{ Token_jwt }}
 None
 
 ### Example
-```localhost:8080/api/v1/account```
+```api/v1/account```
 
 #### Response `200`
+
 ```json
 {
     "count": 4,
@@ -68,7 +69,7 @@ Authorization : Bearer {{ Token_jwt }}
 | shareCode | string   | não | Código de compartilhamento |
 
 ### Example
-```localhost:8080/api/v1/account```
+```api/v1/account```
 
 ### Example Body
 ```json
@@ -129,7 +130,7 @@ Authorization : Bearer {{ Token_jwt }}
 | share | bool   | não | Status de compartilhamento |
 
 ### Example
-```localhost:8080/api/v1/account/40```
+```api/v1/account/40```
 
 ### Example Body
 ```json
@@ -177,7 +178,7 @@ Authorization : Bearer {{ Token_jwt }}
 None
 
 ### Example
-```localhost:8080/api/v1/account/40```
+```api/v1/account/40```
 
 #### Response `200`
 ```json
@@ -215,7 +216,7 @@ Authorization : Bearer {{ Token_jwt }}
 None
 
 ### Example
-```localhost:8080/api/v1/category```
+```api/v1/category```
 
 #### Response `200`
 ```json
@@ -260,7 +261,7 @@ Authorization : Bearer {{ Token_jwt }}
 | icone    | string | não | Icone da categoria |
 
 ### Example
-```localhost:8080/api/v1/category```
+```api/v1/category```
 
 ### Example Body
 ```json
@@ -320,7 +321,7 @@ Authorization : Bearer {{ Token_jwt }}
 | icone    | string | não | Icone da categoria |
 
 ### Example
-```localhost:8080/api/v1/category/40```
+```api/v1/category/40```
 
 ### Example Body
 ```json
@@ -368,7 +369,7 @@ Authorization : Bearer {{ Token_jwt }}
 None
 
 ### Example
-```localhost:8080/api/v1/category/40```
+```api/v1/category/40```
 
 #### Response `200`
 ```json
@@ -407,7 +408,7 @@ Authorization : Bearer {{ Token_jwt }}
 None
 
 ### Example
-```localhost:8080/api/v1/dashboard```
+```api/v1/dashboard```
 
 #### Response `200`
 ```json
@@ -562,7 +563,7 @@ Authorization : Bearer {{ Token_jwt }}
 None
 
 ### Example
-```localhost:8080/api/v1/feedback```
+```api/v1/feedback```
 
 #### Response `200`
 ```json
@@ -603,7 +604,7 @@ Authorization : Bearer {{ Token_jwt }}
 
 
 ### Example
-```localhost:8080/api/v1/feedback```
+```api/v1/feedback```
 
 ### Example Body
 ```json
@@ -654,7 +655,7 @@ Authorization : Bearer {{ Token_jwt }}
 None
 
 ### Example
-```localhost:8080/api/v1/transactions```
+```api/v1/transactions```
 
 #### Response `200`
 ```json
@@ -692,7 +693,7 @@ Authorization : Bearer {{ Token_jwt }}
 None
 
 ### Example
-```localhost:8080/api/v1/transactions/share```
+```api/v1/transactions/share```
 
 #### Response `200`
 ```json
@@ -727,7 +728,7 @@ Authorization : Bearer {{ Token_jwt }}
 None
 
 ### Example
-```localhost:8080/api/v1/transaction/123```
+```api/v1/transaction/123```
 
 #### Response `200`
 ```json
@@ -777,7 +778,7 @@ Authorization : Bearer {{ Token_jwt }}
 | data_transacao_low | datetime (YYYY-MM-DD)   | não | Data da transação |
 
 ### Example
-```localhost:8080/api/v1/transactions```
+```api/v1/transactions```
 
 ### Example Body
 ```json
@@ -834,7 +835,7 @@ Authorization : Bearer {{ Token_jwt }}
 | file    | File | sim | Arquivo CSV |
 
 ### Example
-```localhost:8080/api/v1/transactions/import/csv```
+```api/v1/transactions/import/csv```
 
 ### Example Body
 Nubank_2026_01_01.csv
@@ -883,7 +884,7 @@ Authorization : Bearer {{ Token_jwt }}
 | data_transacao | datetime (YYYY-MM-DD)   | não | Data da transação |
 
 ### Example
-```localhost:8080/api/v1/transactions/40```
+```api/v1/transactions/40```
 
 ### Example Body
 ```json
@@ -927,7 +928,7 @@ Authorization : Bearer {{ Token_jwt }}
 None
 
 ### Example
-```localhost:8080/api/v1/transactions/40```
+```api/v1/transactions/40```
 
 #### Response `200`
 ```json
@@ -964,7 +965,7 @@ Authorization : Bearer {{ Token_jwt }}
 None
 
 ### Example
-```localhost:8080/api/v1/transaction/123```
+```api/v1/transaction/123```
 
 #### Response `200`
 ```json
@@ -996,7 +997,7 @@ Authorization : Bearer {{ Token_jwt }}
 | senha   | string   | sim | Senha do usuário | 
 
 ### Example
-```localhost:8080/api/v1/account```
+```api/v1/account```
 
 ### Example Body
 ```json
@@ -1050,7 +1051,7 @@ Authorization : Bearer {{ Token_jwt }}
 | senha   | string   | sim | Senha do usuário | 
 
 ### Example
-```localhost:8080/api/v1/account```
+```api/v1/account```
 
 ### Example Body
 ```json
