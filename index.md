@@ -983,7 +983,7 @@ None
 
 ### Example
 
-api/v1/transaction/123
+api/v1/usuario/confirmar-email
 
 #### Response `200`
 ```json
@@ -1016,7 +1016,7 @@ Authorization : Bearer {{ Token_jwt }}
 
 ### Example
 
-api/v1/account
+api/v1/usuario
 
 ### Example Body
 ```json
@@ -1071,7 +1071,7 @@ Authorization : Bearer {{ Token_jwt }}
 
 ### Example
 
-api/v1/account
+api/v1/usuario/login
 
 ### Example Body
 ```json
