@@ -19,7 +19,7 @@ Authorization : Bearer {{ Token_jwt }}
 None
 
 ### Example
-```api/v1/account```
+api/v1/account
 
 #### Response `200`
 
@@ -69,7 +69,8 @@ Authorization : Bearer {{ Token_jwt }}
 | shareCode | string   | não | Código de compartilhamento |
 
 ### Example
-```api/v1/account```
+
+api/v1/account
 
 ### Example Body
 ```json
