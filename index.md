@@ -7,9 +7,9 @@ title: Documentação ShareFin
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| nome    | string | não | Nome da conta |
-| moeda   | string   | não | Moeda utilizada na conta |
-| ativa | bool   | não | Status de atividade |
+| name    | string | não | Nome da conta |
+| coin   | string   | não | Moeda utilizada na conta |
+| ative | bool   | não | Status de atividade |
 | share | bool   | não | Status de compartilhamento |
 
 ### Headers
@@ -25,17 +25,17 @@ api/v1/account
 
 ```json
 {
-    "count": 4,
+    "count": 3,
     "result": [
         {
             "id": 40,
-            "usuario_id": 1,
-            "nome": "C6",
-            "moeda": "BRL",
-            "cor": "#fff",
-            "ativa": true,
+            "user_id": 1,
+            "name": "C9 Bank",
+            "coin": "BRL",
+            "color": "#fff",
+            "ative": true,
             "created_at": "2025-12-27T18:52:59.4",
-            "update_at": "2025-12-27T18:52:59.4",
+            "update_at": "2026-01-17T10:47:42.678",
             "share": true
         },
     ]
@@ -61,10 +61,10 @@ Authorization : Bearer {{ Token_jwt }}
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
 | user    | int | sim | Id do usuário |
-| nome   | string   | sim | Nome da conta bancária | 
-| moeda | string   | sim | Moeda utilizada na conta |
-| cor | string   | não | Cor da conta bancária |
-| ativa | bool   | não | Status de atividade |
+| name   | string   | sim | Nome da conta bancária | 
+| coin | string   | sim | Moeda utilizada na conta |
+| color | string   | não | Cor da conta bancária |
+| ative | bool   | não | Status de atividade |
 | share | bool   | não | Status de compartilhamento |
 | shareCode | string   | não | Código de compartilhamento |
 
@@ -76,10 +76,10 @@ api/v1/account
 ```json
 {
     "user": 1,
-    "nome": "C6",
-    "moeda": "BRL",
-    "cor": "#fff",
-    "ativa": true,
+    "name": "C6",
+    "coin": "BRL",
+    "color": "#fff",
+    "ative": true,
     "share": false,
     "shareCode": ""
 }
@@ -124,10 +124,10 @@ Authorization : Bearer {{ Token_jwt }}
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| nome   | string   | não | Nome da conta bancária | 
-| moeda | string   | não | Moeda utilizada na conta |
-| cor | string   | não | Cor da conta bancária |
-| ativa | bool   | não | Status de atividade |
+| name   | string   | não | Nome da conta bancária | 
+| coin | string   | não | Moeda utilizada na conta |
+| color | string   | não | Cor da conta bancária |
+| ative | bool   | não | Status de atividade |
 | share | bool   | não | Status de compartilhamento |
 
 ### Example
@@ -137,7 +137,7 @@ api/v1/account/40
 ### Example Body
 ```json
 {
-    "nome": "C9 Bank"
+    "name": "C9 Bank"
 }
 ```
 
@@ -209,8 +209,8 @@ api/v1/account/40
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| nome   | string   | não | Nome da categoria |
-| tipo   | string   | não | Tipo da transação |
+| name   | string   | não | Nome da categoria |
+| type   | string   | não | Tipo da transação |
 
 ### Headers
 Authorization : Bearer {{ Token_jwt }}
@@ -225,16 +225,16 @@ api/v1/category
 #### Response `200`
 ```json
 {
-    "count": 16,
+    "count": 15,
     "result": [
         {
             "id": 28,
-            "usuario_id": 1,
-            "nome": "Internet",
-            "tipo": "1",
-            "cor": "#ff00ea",
-            "valor_inicial": 0,
-            "icone": null
+            "user_id": 1,
+            "name": "Internet",
+            "type": "1",
+            "color": "#ff00ea",
+            "initial_value": 0,
+            "icon": null
         },
     ]
 }
@@ -258,11 +258,11 @@ Authorization : Bearer {{ Token_jwt }}
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| nome   | string   | sim | Nome da categoria | 
-| tipo | string   | sim | Tipo da categoria |
-| valor_inicial | Float   | não | Valor inicial da categoria |
-| cor | string   | não | Cor da categoria |
-| icone    | string | não | Icone da categoria |
+| name   | string   | sim | Nome da categoria | 
+| type | string   | sim | Tipo da categoria |
+| initial_value | Float   | não | Valor inicial da categoria |
+| color | string   | não | Cor da categoria |
+| icon    | string | não | Icone da categoria |
 
 ### Example
 
@@ -271,11 +271,11 @@ api/v1/category
 ### Example Body
 ```json
 {
-    "nome": "Faculdade",
-    "tipo": "0",
-    "cor": "#fff",
-    "valor_inicial": "10",
-    "usuario_id": 2
+    "name": "Faculdade",
+    "type": "0",
+    "color": "#fff",
+    "initial_value": "10",
+    "user_id": 2
 }
 ```
 
@@ -319,11 +319,11 @@ Authorization : Bearer {{ Token_jwt }}
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| nome   | string   | sim | Nome da categoria | 
-| tipo | string   | sim | Tipo da categoria |
-| valor_inicial | Float   | não | Valor inicial da categoria |
-| cor | string   | não | Cor da categoria |
-| icone    | string | não | Icone da categoria |
+| name   | string   | sim | Nome da categoria | 
+| type | string   | sim | Tipo da categoria |
+| initial_value | Float   | não | Valor inicial da categoria |
+| color | string   | não | Cor da categoria |
+| icon    | string | não | Icone da categoria |
 
 ### Example
 
@@ -332,7 +332,7 @@ api/v1/category/40
 ### Example Body
 ```json
 {
-    "nome": "Cursos Udemy"
+    "name": "Cursos Udemy"
 }
 ```
 
@@ -404,9 +404,9 @@ api/v1/category/40
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| data_transacao_low   | datetime (YYYY-MM-DD)   | não | Data inicial do filtro de transação |
-| data_transacao_high   | datetime (YYYY-MM-DD)   | não | Data final do filtro de transação |
-| conta   | string   | não | Conta da transação |
+| date_transaction_low   | datetime (YYYY-MM-DD)   | não | Data inicial do filtro de transação |
+| date_transaction_high   | datetime (YYYY-MM-DD)   | não | Data final do filtro de transação |
+| account   | string   | não | Conta da transação |
 
 ### Headers
 Authorization : Bearer {{ Token_jwt }}
@@ -577,13 +577,13 @@ api/v1/feedback
 #### Response `200`
 ```json
 {
-    "count": 5,
+    "count": 6,
     "result": [
         {
             "id": 1,
-            "usuario_id": 1,
-            "titulo": "BUG",
-            "descricao": "tela de categorias nao abre!",
+            "user_id": 1,
+            "tittle": "BUG",
+            "description": "tela de categorias nao abre!",
             "created_at": "2025-11-23T18:46:03.023"
         },
     ]
@@ -608,8 +608,8 @@ Authorization : Bearer {{ Token_jwt }}
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| titulo    | string | sim | Titulo do feedback |
-| descricao   | string   | sim | Descrição do feedback | 
+| tittle    | string | sim | Titulo do feedback |
+| description   | string   | sim | Descrição do feedback | 
 
 
 ### Example
@@ -619,8 +619,8 @@ api/v1/feedback
 ### Example Body
 ```json
 {
-    "titulo": "BUG",
-    "descricao": "tela de categorias nao abre!"
+    "tittle": "BUG",
+    "description": "tela de categorias nao abre!"
 }
 ```
 
@@ -650,13 +650,13 @@ api/v1/feedback
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| conta    | string | não | Nome da conta |
-| categoria   | string   | não | Nome da categoria |
-| usuario | string   | não | Nome do usuário |
-| obs | string   | não | Nome da transação |
-| tipo | string   | não | Tipo da transação ("1" receita, "2" despesa) |
-| data_transacao_low | datetime (YYYY-MM-DD)   | não | Data inicial do filtro de transação |
-| data_transacao_high | datetime (YYYY-MM-DD)   | não | Data final do filtro de transação |
+| account    | string | não | Nome da conta |
+| category   | string   | não | Nome da categoria |
+| user | string   | não | Nome do usuário |
+| name | string   | não | Nome da transação |
+| type | string   | não | Tipo da transação ("1" receita, "2" despesa) |
+| date_transaction_low | datetime (YYYY-MM-DD)   | não | Data inicial do filtro de transação |
+| date_transaction_high | datetime (YYYY-MM-DD)   | não | Data final do filtro de transação |
 
 ### Headers
 Authorization : Bearer {{ Token_jwt }}
@@ -675,12 +675,12 @@ api/v1/transactions
     "result": [
         {
             "id": 123,
-            "valor": 75.58,
-            "obs": "Cafes gourmet",
-            "data_transacao": "2026-01-08T00:00:00",
-            "conta": "Caixa",
-            "categoria": "Vale alimentação",
-            "usuario": "Augusto Dalmas"
+            "value": 75.58,
+            "name": "Cafes gourmet",
+            "date_transaction": "2026-01-08T00:00:00",
+            "account": "Caixa",
+            "category": "Vale alimentação",
+            "user": "Augusto Dalmas"
         },
     ]
 }
@@ -712,12 +712,12 @@ api/v1/transactions/share
 [
     {
         "id": 126,
-        "valor": -123,
-        "obs": "Livro MongoDB",
-        "data_transacao": "2026-01-17T00:00:00",
-        "conta": "COMPART",
-        "categoria": "Faculdade",
-        "usuario": "Augusto Rodolpho Dalmás"
+        "value": -123,
+        "name": "Livro MongoDB",
+        "date_transaction": "2026-01-17T00:00:00",
+        "account": "COMPART",
+        "category": "Faculdade",
+        "user": "Augusto Rodolpho Dalmás"
     },
 ]
 ```
@@ -747,14 +747,14 @@ api/v1/transaction/123
 ```json
 {
     "id": 123,
-    "valor": 75.58,
-    "obs": "Cafes gourmet",
-    "data_transacao": "2026-01-08T00:00:00",
-    "conta": "Caixa",
-    "conta_id": 19,
-    "categoria": "Vale alimentação",
-    "categoria_id": 31,
-    "usuario": "Augusto Dalmas"
+    "value": 75.58,
+    "name": "Cafes gourmet",
+    "date_transaction": "2026-01-08T00:00:00",
+    "account": "Caixa",
+    "account_id": 19,
+    "category": "Vale alimentação",
+    "category_id": 31,
+    "user": "Augusto Dalmas"
 }
 ```
 
@@ -783,12 +783,12 @@ Authorization : Bearer {{ Token_jwt }}
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| conta    | Int | não | ID da conta |
-| categoria   | Int   | não | ID da categoria |
-| usuario | Int   | não | ID do usuário |
-| valor | float   | sim | Valor da transação |
-| obs | string   | não | Nome da transação |
-| data_transacao_low | datetime (YYYY-MM-DD)   | não | Data da transação |
+| account    | Int | não | ID da conta |
+| category   | Int   | não | ID da categoria |
+| user | Int   | não | ID do usuário |
+| value | float   | sim | Valor da transação |
+| name | string   | não | Nome da transação |
+| date_transaction | datetime (YYYY-MM-DD)   | não | Data da transação |
 
 ### Example
 
@@ -798,11 +798,11 @@ api/v1/transactions
 ```json
 {
     "user": 1,
-    "conta": 40,
-    "categoria": 28,
-    "valor": 666,
-    "data_transacao": "2026-01-17",
-    "obs": "item aleatorio"
+    "account": 40,
+    "category": 28,
+    "value": 666,
+    "date_transaction": "2026-01-17",
+    "name": "item aleatorio"
 }
 ```
 
@@ -891,12 +891,12 @@ Authorization : Bearer {{ Token_jwt }}
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| conta    | Int | não | ID da conta |
-| categoria   | Int   | não | ID da categoria |
-| usuario | Int   | não | ID do usuário |
-| valor | float   | sim | Valor da transação |
-| obs | string   | não | Nome da transação |
-| data_transacao | datetime (YYYY-MM-DD)   | não | Data da transação |
+| account    | Int | não | ID da conta |
+| category   | Int   | não | ID da categoria |
+| user | Int   | não | ID do usuário |
+| value | float   | sim | Valor da transação |
+| name | string   | não | Nome da transação |
+| date_transaction | datetime (YYYY-MM-DD)   | não | Data da transação |
 
 ### Example
 
@@ -905,10 +905,10 @@ api/v1/transactions/40
 ### Example Body
 ```json
 {
-    "conta_id": 2,
-    "valor": 555,
-    "obs": "Chocolate",
-    "data_transacao": "2025-10-11T03:00:00"
+    "account_id": 2,
+    "value": 555,
+    "name": "Chocolate",
+    "date_transaction": "2025-10-11T03:00:00"
 }
 ```
 
@@ -1010,9 +1010,9 @@ Authorization : Bearer {{ Token_jwt }}
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| nome   | string   | sim | Nome do usuário | 
+| name   | string   | sim | Nome do usuário | 
 | email   | string   | sim | Email do usuário | 
-| senha   | string   | sim | Senha do usuário | 
+| password   | string   | sim | Senha do usuário | 
 
 ### Example
 
@@ -1021,9 +1021,9 @@ api/v1/usuario
 ### Example Body
 ```json
 {
-    "nome": "Augusto Rodolhpo",
+    "name": "Augusto Rodolhpo",
     "email": "augustorodolpho@gmail.com",
-    "senha": "XXXXXXXX"
+    "password": "XXXXXXXX"
 }
 ```
 
@@ -1067,7 +1067,7 @@ Authorization : Bearer {{ Token_jwt }}
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
 | email   | string   | sim | Email do usuário | 
-| senha   | string   | sim | Senha do usuário | 
+| password   | string   | sim | Senha do usuário | 
 
 ### Example
 
@@ -1077,7 +1077,7 @@ api/v1/usuario/login
 ```json
 {
     "email": "augusto.dalmas@gmail.com",
-    "senha": "XXXXXXXX"
+    "password": "XXXXXXXX"
 }
 ```
 
