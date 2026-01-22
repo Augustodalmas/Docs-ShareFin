@@ -1,6 +1,27 @@
 # ShareFin API
 
-API REST responsável pelo gerenciamento financeiro pessoal e compartilhado.
+API REST responsável pelo gerenciamento financeiro pessoal e compartilhado, permitindo
+que usuários registrem receitas e despesas, organizem categorias, importem dados bancários
+e visualizem relatórios financeiros de forma simples e segura.
+
+## Funcionalidades Principais
+
+- Cadastro e autenticação de usuários
+- Gerenciamento de contas financeiras
+- Criação de categorias de receitas e despesas
+- Registro manual de transações
+- Importação de transações via arquivo CSV
+- Filtros por período, conta e categoria
+- Dashboard com resumo financeiro
+- Isolamento de dados por usuário
+
+## Fluxo de Uso
+
+1. Usuário cria uma conta e realiza login
+2. Cadastra contas bancárias
+3. Cria categorias personalizadas
+4. Registra transações ou importa via CSV
+5. Visualiza relatórios e dashboards financeiros
 
 # Stack Tecnológica
 
